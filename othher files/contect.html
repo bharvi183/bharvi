@@ -1,0 +1,242 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#contectdiv{
+			background-color: white;
+		}
+		#profilediv{
+			background-color: #EAEC0C;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<script type="text/javascript">
+    function check()
+    {
+        var name= document.forms["form"]["name"];
+        var no= document.forms["form"]["no"];
+        var email= document.forms["form"]["email"];
+        var msg= document.forms["form"]["msg"];
+
+        var c_name=/[a-zA-Z]+$/;
+        var c_no=/([0-9]{10})+$/;
+        var c_psw=/([0-9]{6,12})+$/;
+        
+
+        if(name.value=="")
+        {
+          alert("please enter your name");
+          name.focus();
+          return false;
+        }
+        if(c_name.test(name.value)== false)
+        {
+          alert("please enter valid name");
+          name.focus();
+          return false;
+        }
+
+                              if(no.value=="")
+                              {
+                                alert("enter mobile number");
+                                no.focus();
+                                return false;
+                              }
+                              if(c_no.test(no.value)== false)
+                              {
+                                alert("enter valid mobile No.");
+                                no.focus();
+                                return false;
+                              }
+
+
+
+            if(email.value=="")
+            {
+              alert("enter email address");
+              email.focus();
+              return false;
+            }
+            if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)== false)
+              {
+                alert("enter valid email address");
+                email.focus();
+                return false;
+              }
+
+              					if(msg.value=="")
+                              {
+                                alert("enter Your Message");
+                                no.focus();
+                                return false;
+                              }
+                              
+    }
+  </script>
+</head>
+<body bgcolor="#D3D51D">
+<!--....................................cover.................................-->
+
+	<div id="cover">
+		<div id="vmanu">
+			<a href="https://www.facebook.com/"><img id="fb" class="same" src="facebook.png"></img></a>
+			<a href="https://www.instagram.com/"><img id="insta" class="same" src="insta.png"></img></a>
+			<a href="https://twitter.com/Google?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img id="twe" class="same" src="twe.png"></img></a>
+			<a href="https://www.skype.com/en/"><img id="git" class="same" src="git.png"></img></a>
+			<a href="https://stackoverflow.com/"></a><img id="stake" class="same" src="stake.png"></img></a>
+		</div>
+		<div id="hmanu">
+			<p id="rotate"><b>ᗪEᐯEᒪOᑭEᖇ</b></p>
+			<div id="div1">
+
+					<a href="../index.html">
+					<div id="profilediv" class="same1">
+					<img id="same" src="profile.png"></img>
+					<p id="sametext"><font >ᴘʀᴏꜰɪʟᴇ</font></p>
+					</div></a>
+
+					<a href="service.html">
+					<div id="servicediv" class="same1">
+					<img id="same" src="service.png"></img>
+					<p id="sametext"><font >ꜱᴇʀᴠɪᴄᴇ</font></p>
+					</div></a>
+
+					<a href="resume.html">
+					<div id="resumediv" class="same1">
+					<img id="same" src="project.png"></img>
+					<p id="sametext"><font >ᴘʀᴏᴊᴇᴄᴛ</font></p>
+					</div></a>
+
+					<a href="contect.html">
+					<div id="contectdiv" class="same1">
+					<img id="same" src="contect.png"></img>
+					<p id="sametext"><font >ᴄᴏɴᴛᴇᴄᴛ</font></p>
+					</div></a>
+
+					
+
+					
+			</div>
+		</div>
+
+	<div id="second" style="background-color: #EAEC0C;">
+<div id="photo">
+			<div id="ph"><img id="myimg" src="myimg.jpg"></img>
+						
+			</div>
+			
+			<script type="text/javascript">
+				var container = document.getElementById('ph');
+				var inner = document.getElementById('ph');
+        
+				var onMouseEnterHandler = function(event) {
+				  update(event);
+				};
+				var onMouseLeaveHandler = function() {
+				  inner.style = "";
+				};
+				var onMouseMoveHandler = function(event) {
+				  if (isTimeToUpdate()) {
+				    update(event);
+				  }
+				};
+
+				container.onmouseenter = onMouseEnterHandler;
+				container.onmouseleave = onMouseLeaveHandler;
+				container.onmousemove = onMouseMoveHandler;
+				var counter = 0;
+				var updateRate = 10;
+				var isTimeToUpdate = function() {
+				  return counter++ % updateRate === 0;
+				};
+				var mouse = {
+				  _x: 0,
+				  _y: 0,
+				  x: 0,
+				  y: 0,
+				  updatePosition: function(event) {
+				    var e = event || window.event;
+				    this.x = (e.clientX - this._x) * -1.5;
+				    this.y = (e.clientY - this._y) * 1.5;
+				  },
+				  setOrigin: function(e) {
+				    this._x = e.offsetLeft + Math.floor(e.offsetWidth/2);
+				    this._y = e.offsetTop + Math.floor(e.offsetHeight/2);
+				  },
+				  show: function() { return '(' + this.x + ', ' + this.y + ')'; }
+				}
+				// Track the mouse position relative to the center of the container.
+				mouse.setOrigin(container);
+				var update = function(event) {
+				  mouse.updatePosition(event);
+				  updateTransformStyle(
+				    (mouse.y / inner.offsetHeight/0.9).toFixed(2),
+				    (mouse.x / inner.offsetWidth/0.9).toFixed(2)
+				  );
+				};
+
+				var updateTransformStyle = function(x, y) {
+				  var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
+				  inner.style.transform = style;
+				  inner.style.webkitTransform = style;
+				  inner.style.mozTransform = style;
+				  inner.style.msTransform = style;
+				  inner.style.oTransform = style;
+				};
+			</script>
+		</div>
+		
+		
+			<center>  <br>  <p id="h1"><b><font size="5">SEND YOUR MESSAGE</font></b></p>
+				<form name="form" onsubmit="return check()" action="mailto:bhutbharvi@gmail.com" method="post" enctype="text/plain">
+  <br>
+  
+  <input   type="text" name="name" value="" placeholder="	        Enter Your Name" style="width: 230px; height: 30px; border-radius: 30px;">
+  <br><br>
+
+  
+  <input type="number" name="no" value="" placeholder="		Enter Phone Number" style="width: 230px; height: 30px; border-radius: 30px;">
+  <br><br>
+
+  <input type="text" name="email" value="" placeholder="		Enter Email Address" style="width: 230px; height: 30px; border-radius: 30px;">
+  <br><br>
+
+ 
+  
+  <input type="text"name="msg" placeholder="              Enter Your Message Here" style="border-radius: 20px; width: 280px; height: 90px;">
+  	
+  <br><br><br>
+  <input type="submit" name="submit" id="sr"   style="background-color: black;color: white; font-size: 20px; border-radius: 20px;">&nbsp;&nbsp;&nbsp;
+  <input type="reset" name="reset" id="sr" style="background-color: black;color: white; font-size: 20px; border-radius: 20px;">
+  <br><br>
+
+  </form> 
+</center>
+<table style="text-align: center;width: 380px;" align="center">
+			<tr>
+				
+				<td>
+					
+					<p id="fullname"><font size="2"><b>PHONE: </b>6354767080</font></p>
+				</td>
+				<td>
+					<p id="fullname"><font size="2"><b>EMAIL: </b>bhutbharvi@gmail.com</font></p>
+				</td>
+			</tr>
+			
+			</table>
+   
+			
+		</div>
+
+	</div>
+
+
+</div>
+<!--....................................end cover.................................-->
+
+</body>
+</html>

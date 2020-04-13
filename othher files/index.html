@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="othher files/css.css">
+</head>
+<body bgcolor="#D3D51D">
+<!--....................................cover.................................-->
+
+	<div id="cover">
+		<div id="vmanu">
+			<a href="https://www.facebook.com/"><img id="fb" class="same" src="othher files/facebook.png"></img></a>
+			<a href="https://www.instagram.com/"><img id="insta" class="same" src="othher files/insta.png"></img></a>
+			<a href="https://twitter.com/Google?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img id="twe" class="same" src="othher files/twe.png"></img></a>
+			<a href="https://www.skype.com/en/"><img id="git" class="same" src="othher files/git.png"></img></a>
+			<a href="https://stackoverflow.com/"></a><img id="stake" class="same" src="othher files/stake.png"></img></a>
+		</div>
+		<div id="hmanu">
+			<p id="rotate"><b>ᗪEᐯEᒪOᑭEᖇ</b></p>
+			<div id="div1">
+					<a href="coppetation.html"></a>
+					<div id="profilediv" class="same1">
+					<img id="same" src="othher files/profile.png"></img>
+					<p id="sametext"><font >ᴘʀᴏꜰɪʟᴇ</font></p>
+					</div></a>
+
+					<div id="servicediv" class="same1">
+					<img id="same" src="othher files/service.png"></img>
+					<p id="sametext"><font >ꜱᴇʀᴠɪᴄᴇ</font></p>
+					</div>
+
+					<a href="othher files/resume.html">
+					<div id="resumediv" class="same1">
+					<img id="same" src="othher files/resume.png"></img>
+					<p id="sametext"><font >ʀᴇꜱᴜᴍᴇ</font></p>
+					</div></a>
+
+					<a href="othher files/contect.html">
+					<div id="contectdiv" class="same1">
+					<img id="same" src="othher files/contect.png"></img>
+					<p id="sametext"><font >ᴄᴏɴᴛᴇᴄᴛ</font></p>
+					</div></a>
+
+					
+
+					
+			</div>
+		</div>
+
+	<div id="second">
+		
+		<div id="photo">
+			<div id="ph"><img id="myimg" src="othher files/myimg.jpg"></img>
+						
+			</div>
+			
+			<script type="text/javascript">
+				var container = document.getElementById('ph');
+				var inner = document.getElementById('ph');
+        
+				var onMouseEnterHandler = function(event) {
+				  update(event);
+				};
+				var onMouseLeaveHandler = function() {
+				  inner.style = "";
+				};
+				var onMouseMoveHandler = function(event) {
+				  if (isTimeToUpdate()) {
+				    update(event);
+				  }
+				};
+
+				container.onmouseenter = onMouseEnterHandler;
+				container.onmouseleave = onMouseLeaveHandler;
+				container.onmousemove = onMouseMoveHandler;
+				var counter = 0;
+				var updateRate = 10;
+				var isTimeToUpdate = function() {
+				  return counter++ % updateRate === 0;
+				};
+				var mouse = {
+				  _x: 0,
+				  _y: 0,
+				  x: 0,
+				  y: 0,
+				  updatePosition: function(event) {
+				    var e = event || window.event;
+				    this.x = (e.clientX - this._x) * -1.5;
+				    this.y = (e.clientY - this._y) * 1.5;
+				  },
+				  setOrigin: function(e) {
+				    this._x = e.offsetLeft + Math.floor(e.offsetWidth/2);
+				    this._y = e.offsetTop + Math.floor(e.offsetHeight/2);
+				  },
+				  show: function() { return '(' + this.x + ', ' + this.y + ')'; }
+				}
+				// Track the mouse position relative to the center of the container.
+				mouse.setOrigin(container);
+				var update = function(event) {
+				  mouse.updatePosition(event);
+				  updateTransformStyle(
+				    (mouse.y / inner.offsetHeight/0.9).toFixed(2),
+				    (mouse.x / inner.offsetWidth/0.9).toFixed(2)
+				  );
+				};
+
+				var updateTransformStyle = function(x, y) {
+				  var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
+				  inner.style.transform = style;
+				  inner.style.webkitTransform = style;
+				  inner.style.mozTransform = style;
+				  inner.style.msTransform = style;
+				  inner.style.oTransform = style;
+				};
+			</script>
+		</div>
+		<div id="contain">
+			<div id="name"><b>ᗷᕼᗩᖇᐯI ᗷᕼᑌT</b></div>
+			<div id="line"><b>PROFESSIONAL ANDROID DEVELOPER</b></div><br>
+			
+			<table>
+			<tr>
+				<td>
+					<img id="user" src="othher files/user.jpg"></img><br>
+					<img id="user" src="othher files/dob.jpg"></img><br>
+					<img id="user" src="othher files/add.jpg"></img><br>
+					<img id="user" src="othher files/phone.jpg"></img><br>
+					<img id="user" src="othher files/mail.jpg"></img>
+				</td>
+				<td>
+					<p id="fullname"><b>NAME: </b>Bharvi Bhut</p>
+					<p id="fullname"><b>DATE OF BIRTH: </b>March 18, 2001</p>
+					<p id="fullname"><b>ADDRESS: </b>A-Madhav bag, Junagadh</p>
+					<p id="fullname"><b>PHONE: </b>6354767080</p>
+					<p id="fullname"><b>EMAIL: </b>bhutbharvi@gmail.com</p>
+				</td>
+			</tr>
+			
+			</table>
+			<table id="objective">
+				<tr>
+					<td id="td1">
+						<img id="obj" src="othher files/obj.png"></img>
+					</td>
+					<td><font size="5px"><b>𝐎𝐛𝐣𝐞𝐜𝐭𝐢𝐯𝐞</b></font></td>
+					<td id="blenk"></td>
+				</tr>
+				<tr>
+					<td id="td2" colspan="2"><p>To secure a challenging and rewarding position as Android Developer with an established organization that can utilize my skills and experience. Designed and coded from specifications, analyzed, evaluated, tested and implemented complex software apps.</p></td>
+					<td id="download">
+						<a href="othher files/aa.pdf" download>
+   							<button id="button1" type="submit">Download my CV</button>
+						</a>
+					</td>
+				</tr>
+			</table>
+			
+		</div>
+
+	</div>
+
+
+</div>
+<!--....................................end cover.................................-->
+
+</body>
+</html>
